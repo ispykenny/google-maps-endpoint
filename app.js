@@ -24,7 +24,7 @@ app.get('/', (req, res, err) => {
   }
 
 
-  url += `&key=${process.env.APIKEY}`
+  url += `&key=${process.env.APIKEY}&saturation=100`
 
   imageDataURI.encodeFromURL(url)
     .then(resp => {
