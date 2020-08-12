@@ -23,6 +23,10 @@ app.get('/', (req, res, err) => {
     url += `&size=${req.query.size}`
   }
 
+  if(req.query.maptype) {
+    url += `&maptype=${req.query.maptype}`
+  }
+
 
   url += `&key=${process.env.APIKEY}&saturation=100`
 
